@@ -10,3 +10,10 @@
    comments. */
 
    console.log("Comments make your code more readable by others.");
+   console.log('Below this line of code are some more comments.')
+   // single line commment example
+   /* Multi
+   Line 
+   Commment
+   */
+   console.log('Comments can begin with with `//` or `/* ... */`');
