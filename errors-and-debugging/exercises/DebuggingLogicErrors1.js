@@ -1,6 +1,13 @@
 // Run this sample code as-is and examine the output. 
-// Should the shuttle have launched? 
-// Did it?
+// Should the shuttle have launched? ANSWER: No
+// Did it? ANSWER: Yes
+
+// console message:
+// WARNING: Insufficient fuel!
+// Crew & computer cleared.
+// 10, 9, 8, 7, 6, 5, 4, 3, 2, 1...
+// Liftoff!
+
 // Do not worry about fixing the code yet, we will do that in the next series of exercises.
 
 let launchReady = false;
