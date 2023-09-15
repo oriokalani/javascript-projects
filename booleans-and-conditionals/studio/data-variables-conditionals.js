@@ -34,6 +34,7 @@ let messageWeatherStatus = `Weather Status: ${weatherStatus}`;
 // add logic below to verify the fuel temperature is within the appropriate range of -150 and -300
 // add logic below to verify the fuel level is at 100%
 // add logic below to verify the weather status is clear
+/*
 if (astronautCount <= 7) {
     astronautStatus = 'ready';
 } else {
@@ -64,6 +65,49 @@ if (weatherStatus === 'clear') {
     astronautStatus = 'not ready';
 }
 // console.log(astronautStatus);
+*/
+
+if (!(astronautCount <= 7)) {
+    astronautStatus = !'ready';
+}
+console.log(astronautStatus);
+if (!(totalMassKg < maximumMassLimit)) {
+    astronautStatus = !'ready';
+}
+console.log(astronautStatus);
+if (!(totalMassKg < maximumMassLimit)) {
+    astronautStatus = !'ready';
+}
+console.log(astronautStatus);
+if (!(fuelTempCelsius > minimumFuelTemp || fuelTempCelsius < maximumFuelTemp)) {
+    astronautStatus = !'ready';
+}
+console.log(astronautStatus);
+if (!(fuelLevel === 100)) {
+    astronautStatus = !'ready';
+}
+console.log(astronautStatus);
+if (!(weatherStatus === 'clear')) {
+    astronautStatus = !'ready';
+}
+console.log(astronautStatus);
+
+// Refactored `if / else` statements to `inverse if` statements
+/*
+if (!(astronautCount <= 7)) {astronautStatus = !'ready';}
+console.log(astronautStatus);
+if (!(totalMassKg < maximumMassLimit)) {astronautStatus = !'ready';}
+console.log(astronautStatus);
+if (!(totalMassKg < maximumMassLimit)) {astronautStatus = !'ready';}
+console.log(astronautStatus);
+if (!(fuelTempCelsius > minimumFuelTemp || fuelTempCelsius < maximumFuelTemp)) {astronautStatus = !'ready';}
+console.log(astronautStatus);
+if (!(fuelLevel === 100)) {astronautStatus = !'ready';}
+console.log(astronautStatus);
+if (!(weatherStatus === 'clear')) {astronautStatus = !'ready';}
+console.log(astronautStatus);
+*/
+
 
 // CONSOLE OUTPUT
 console.log(messageLaunchSequence);
