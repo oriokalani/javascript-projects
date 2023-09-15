@@ -8,7 +8,7 @@ let crewMassKg = astronautCount * averageAstronautMassKg;
 let fuelMassKg = 760000;
 let shuttleMassKg = 74842.31;
 let totalMassKg = crewMassKg + fuelMassKg + shuttleMassKg;
-let maximumMassLimit = 85000;
+let maximumMassLimit = 850000;
 let fuelTempCelsius = -225;
 let minimumFuelTemp = -300;
 let maximumFuelTemp = -150;
@@ -44,34 +44,31 @@ if (astronautCount <= 7) {
 } else {
     astronautStatus = 'not ready';
 }
+// console.log(astronautStatus);
 if (totalMassKg < maximumMassLimit) {
     astronautCount = 'ready';
 } else {
     astronautStatus = 'not ready';
 }
+// console.log(astronautStatus);
 if (fuelTempCelsius > minimumFuelTemp || fuelTempCelsius < maximumFuelTemp) {
     astronautCount = 'ready';
 } else {
     astronautStatus = 'not ready';
 }
-if (fuelLevel = )
-// Verify shuttle launch can proceed based on above conditions
-// if (astronautCount <= 7) {
-//     if (astronautStatus === 'ready') {
-//         if (totalMassKg < maximumMassLimit) {
-//             if (fuelTempCelsius > minimumFuelTemp || fuelTempCelsius < maximumFuelTemp) {
-//                 if (fuelLevel === 100) {
-//                     if (weatherStatus === 'clear') {
-//                         preparedForLiftOff;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// } else {
-//     !preparedForLiftOff;
-//}
-
+// console.log(astronautStatus);
+if (fuelLevel === 100) {
+    astronautCount = 'ready';
+} else {
+    astronautStatus = 'not ready';
+}
+// console.log(astronautStatus);
+if (weatherStatus === 'clear') {
+    astronautCount = 'ready';
+} else {
+    astronautStatus = 'not ready';
+}
+// console.log(astronautStatus);
 
 // CONSOLE OUTPUT
 
@@ -87,7 +84,8 @@ console.log(messageTotalMass);
 console.log(messageFuelTemperature);
 console.log(messageWeatherStatus);
 console.log(divider);
-if (preparedForLiftOff) {
+// FINAL MESSAGE
+if (astronautStatus === 'ready') {
     console.log('Have a safe trip astronauts!');
 } else {
     console.log('ABORT: Shut down launch operations!');
