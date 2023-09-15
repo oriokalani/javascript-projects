@@ -64,7 +64,7 @@ if (weatherStatus === 'clear') {
 }
 */
 
-// REFACTORED `if / else` statements to `inverse if` statements
+// REFACTORED `if / else` statements to `inverted if` statements
 /*
 if (!(astronautCount <= 7)) {
     astronautStatus = !'ready';
@@ -86,7 +86,7 @@ if (!(weatherStatus === 'clear')) {
 }
 */
 
-// SINGLE-LINE `inverse if` statements
+// SINGLE-LINE `inverted if` statements
 // console.log to check astronautStatus after each if statement
 
 if (!(astronautCount <= 7)) {astronautStatus = !'ready';}
