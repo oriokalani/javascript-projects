@@ -2,30 +2,41 @@ const input = require('readline-sync');
 
 // Part A: #1 Populate these arrays
 
-let protein = [];
-let grains = [];
-let veggies = [];
-let beverages = [];
-let desserts = [];
+let protein = ['chicken', 'pork', 'tofu', 'beef', 'fish', 'beans'];
+let grains = ['rice', 'pasta', 'corn', 'potato', 'quinoa', 'crackers'];
+let veggies = ['peas', 'green beans', 'kale', 'edamame', 'broccoli', 'asparagus'];
+let beverages = ['juice', 'milk', 'water', 'soy milk', 'soda', 'tea'];
+let desserts = ['apple', 'banana', 'more kale', 'ice cream', 'chocolate', 'kiwi'];
 
 
 function mealAssembly(protein, grains, veggies, beverages, desserts, numMeals) {
   let pantry = [protein, grains, veggies, beverages, desserts];
   let meals = [];
   
+
+  for (let i = 0; i < numMeals; i ++) { // packs a completed meal into the meal array
+    let oneMeal = [];
+    for (let j = 0; j < pantry.length; j ++) { // creates an individual meal
+      oneMeal.push(pantry[j][i]);
+    }
+    meals.push(oneMeal);
+  }
+  
   /// Part A #2: Write a ``for`` loop inside this function
   /// Code your solution for part A #2 below this comment (and above the return statement) ... ///
-
 
   return meals;
 }
 
 
 function askForNumber() {
-  numMeals = input.question("How many meals would you like to make?");
+  numMeals = input.question("How many meals would you like to make? Please enter a number from 1 to 6: ");
   
   /// CODE YOUR SOLUTION TO PART B here ///
-
+  while (numMeals < 1 || numMeals > 6 || isNaN(numMeals)) {
+    numMeals = Number(input.question("Try again. You need to enter a number from 1 to 6: "));
+  }
+  
   return numMeals;
 }
 
