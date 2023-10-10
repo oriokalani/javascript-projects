@@ -1,6 +1,7 @@
 
 let launchcode = {
-  organization: "nonprofit"
+  organization: "nonprofit",
+  executiveDirector: "Jeff"
 }
 
 module.exports = launchcode;
