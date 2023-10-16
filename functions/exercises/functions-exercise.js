@@ -56,7 +56,7 @@ function makeSpaceLine(numSpaces, numChars) {
     let spaceLine = '';
 
     for (let i = 0; i < numSpaces; i ++) {
-        spaces += '_';
+        spaces += ' ';
     }
     for (let i = 0; i < numChars; i ++) {
         chars += '#';
@@ -71,6 +71,26 @@ console.log();
 //TODO: makeIsoscelesTriangle(height) function
 // Write a function makeIsoscelesTriangle(height) that returns a triangle of the given height.
 function makeIsoscelesTriangle(height) {
-    
+    let triangle = '';
+    for (let i = 0; i < height; i++) {
+        triangle += (makeSpaceLine(height - i - 1, 2 * i + 1) + '\n');
+    }
+    return triangle.slice(0, -1);
 }
 console.log(makeIsoscelesTriangle(5));
+
+//TODO: makeDiamond(height) function
+// Write a function makeDiamond(height) that returns a diamond where the triangle formed by the top portion has the given height.
+//! Still needs work
+function reverse(str) {
+    let lettersArray = str.split('');
+    let reversedLettersArray = lettersArray.reverse();
+    return reversedLettersArray.join('');
+}
+
+function makeDiamond(height) {
+    let diamond = '';
+    makeIsoscelesTriangle(height);
+    return diamond.slice(0, -1);
+}
+console.log(makeDiamond(5));
