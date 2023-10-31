@@ -1,8 +1,12 @@
 // Code your selectRandomEntry function here:
+function selectRandomEntry() {
 
+}
 
 // Code your buildCrewArray function here:
+function buildCrewArray(idNumbers, candidate) {
 
+}
 
 let idNumbers = [291, 414, 503, 599, 796, 890];
 
